@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analisador de Contas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>📊 Analisador de Contas Bancárias</h1>
+
+  <div class="upload-area">
+    <input type="file" id="upload" accept=".xlsx" />
+  </div>
+
+  <div class="filters">
+    <input type="text" id="search" placeholder="🔍 Buscar por nome, CPF/CNPJ, e-mail" />
+    <select id="statusFilter">
+      <option value="">📌 Filtrar por Status</option>
+    </select>
+    <select id="tipoClienteFilter">
+      <option value="">👤 Filtrar por Tipo de Cliente</option>
+    </select>
+  </div>
+
+  <div class="charts">
+    <canvas id="statusChart"></canvas>
+    <canvas id="tipoClienteChart"></canvas>
+  </div>
+
+  <div id="output"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
